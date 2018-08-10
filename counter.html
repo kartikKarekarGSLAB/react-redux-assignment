@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Counter react and redux</title>
+	    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+</head>
+<body>
+	<span id="counter-value">0</span>
+	<button id="increment">Increment value by 1</button>
+	<button id="decrement">Decrement value by 1 Async</button>
+
+</body>
+<script>
+	var store = Redux.createStore(counter);
+	var counter_value = document.getElementById("counter-value");
+	function render() {
+		console.log('inside render : ',store.getState());
+		counter_value.innerHTML = store.getState().count;
+	}
+	render();
+	store.subscribe(render);
+	function counter(currentState, action ) {
+		console.log('Action : ',action);
+		var DEFAULT_STATE = {count:10 , sum:0 };
+		var nextState = Object.assign({},currentState);
+		if(currentState == undefined) {
+			nextState = DEFAULT_STATE;
+			return nextState;
+		}
+		switch( action.type ) {
+			case 'INCREMENT' :
+				nextState.count = currentState.count + 1;
+				console.log('new state :',nextState);
+				return nextState;
+			case 'DECREMENT' :
+				nextState.count = currentState.count - 1;
+				console.log('new state :',nextState);
+				return nextState;				
+			case 'SUM' :
+				nextState.sum = action.a + action.b;
+				return nextState; 
+			default :
+				return nextState;
+		}
+	}
+	document.getElementById("increment").addEventListener("click", function () {
+		var action = {type : "INCREMENT"};
+		var action = {type : "SUM" , a:10 ,b:15};		
+		
+		console.group("store.dispatch(action)")
+		store.dispatch(action);
+		console.groupEnd("store.dispatch(action)")
+
+	}, false);
+	document.getElementById("decrement").addEventListener("click", function () {
+				
+		setTimeout(function increment() {
+			var action = {type : "DECREMENT"};
+			store.dispatch(action);	
+		}  , 1000);
+	}, false);	
+</script>
+</html>

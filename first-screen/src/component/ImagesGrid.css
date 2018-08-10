@@ -1,0 +1,8 @@
+.list-image {
+	width: 180px;
+	height: 100px;
+}
+.list-item {
+	list-style: none;
+	display: inline-block;
+}

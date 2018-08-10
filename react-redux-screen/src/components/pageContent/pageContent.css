@@ -1,0 +1,19 @@
+#currentVedioContent {
+	width: 450px;
+	display: inline;
+	background-color: red;
+}
+
+#vedio-playlist {
+	width: 150px;
+	display: inline;
+	background-color: gray;
+}
+
+#page-content {
+	width: 100%;
+	display: inline;
+}
+#page-content > * { 
+	display: inline;
+}

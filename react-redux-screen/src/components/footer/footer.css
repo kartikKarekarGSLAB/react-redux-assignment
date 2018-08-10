@@ -1,0 +1,10 @@
+.footer {
+	width: 100%;
+	text-align: right;
+}
+.footer > * {
+	display: inline;
+}
+.footer > p {
+
+}
