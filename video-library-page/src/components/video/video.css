@@ -1,0 +1,13 @@
+#video-lib-video {
+
+}
+#video-lib-video > * {
+	display: inline-block;
+}
+.video-details {
+	width: 40%;
+}
+.video-details > p {
+	font-size: 15px;
+    margin-left: 5%;
+}

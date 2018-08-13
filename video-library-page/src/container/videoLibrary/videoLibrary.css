@@ -1,0 +1,25 @@
+#video-library > * {
+	width: 50%;
+	display: inline-block;
+}
+#video-player {
+	width: 65%;
+
+}
+#video-player > * {
+	margin-left: 10%;	
+}
+#video-playlist {
+	width: 35%;
+}
+#vedio-playlist-note ,#vedio-player-note ,#vedio-player-title{
+	font-weight: bolder;
+    width: 80%;	
+}
+#vedio-player-note {
+	text-align: center;
+}
+#vedio-playlist-title {
+	text-decoration: underline;
+    font-weight: 900;	
+}
