@@ -54,7 +54,7 @@ console.log('>>>>>>>>>>>>>>>>>>>>>> : ',state),
 {	
   users : state.users.users
 });
-const mapDispatchToProps = (dispatch,props) => {
- return  bindActionCreators({getAllUsers : getAllUsers},dispatch); 	
-};
+const mapDispatchToProps = (dispatch,props) => ({
+  getAllUsers : () => { dispatch(getAllUsers()) } 	
+});
 export default connect(mapStateToProps , mapDispatchToProps)(Users);

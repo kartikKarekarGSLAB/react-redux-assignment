@@ -8,7 +8,7 @@ class VideoLibrary extends Component {
 		return (
 			<div id='video-library'>
 				<div id='video-player'>
-					<p id='vedio-player-note'>
+					<p id='video-player-note'>
 						Your provider will be with you momentarily.
 					</p>
 					<iframe width="650" height="420" 
@@ -16,15 +16,15 @@ class VideoLibrary extends Component {
 						frameBorder="0" 
 						allow="autoplay; encrypted-media" 
 						allowFullScreen />
-					<p id='vedio-player-title'>
-						current vedio title
+					<p id='video-player-title'>
+						current video title
 					</p>					
 				</div>
 				<div id='video-playlist'>
-					<p id='vedio-playlist-note'>
-						The Following vedios have been selected especially for you while you wait
+					<p id='video-playlist-note'>
+						The Following videos have been selected especially for you while you wait
 					</p>
-					<p id='vedio-playlist-title'>
+					<p id='video-playlist-title'>
 						Up Next
 					</p>
 					<VideoList />

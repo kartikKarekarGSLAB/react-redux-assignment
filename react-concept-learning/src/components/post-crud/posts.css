@@ -1,0 +1,16 @@
+#user-post-container > * {
+	display:inline-block;
+}
+#control-panel , #new-post > * {
+	display: block;
+}
+#new-post > label,input {
+	display: inline-block !important;
+}
+#new-post {
+	border:1px solid red;
+}
+
+#control-panel > * {
+	width: 50%;
+}

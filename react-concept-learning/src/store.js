@@ -5,6 +5,6 @@ import thunk from 'redux-thunk';
 
 import reducer from './reducers';
 
-const middleWare = applyMiddleware( thunk );
+const middleWare = applyMiddleware( logger , thunk );
 
-export default createStore( reducer , middleWare );
+export default createStore( reducer , { } ,middleWare );

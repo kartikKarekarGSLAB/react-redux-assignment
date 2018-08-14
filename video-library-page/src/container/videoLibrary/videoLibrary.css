@@ -12,14 +12,14 @@
 #video-playlist {
 	width: 35%;
 }
-#vedio-playlist-note ,#vedio-player-note ,#vedio-player-title{
+#video-playlist-note ,#video-player-note ,#video-player-title{
 	font-weight: bolder;
     width: 80%;	
 }
-#vedio-player-note {
+#video-player-note {
 	text-align: center;
 }
-#vedio-playlist-title {
+#video-playlist-title {
 	text-decoration: underline;
     font-weight: 900;	
 }

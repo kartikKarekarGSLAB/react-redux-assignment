@@ -21,5 +21,4 @@ function Video(props) {
 		</div>
 		);
 }
-
 export default Video;

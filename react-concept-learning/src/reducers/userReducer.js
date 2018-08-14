@@ -6,6 +6,6 @@ function userReducer( previousState = { users : [] }, action ) {
 		default:
 			return {...previousState};
 	}
-	return previousState;
+	// return previousState;
 } 
 export default userReducer;
