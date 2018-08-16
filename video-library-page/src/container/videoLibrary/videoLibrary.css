@@ -4,7 +4,7 @@
 }
 #video-player {
 	width: 65%;
-
+	vertical-align:  text-top;
 }
 #video-player > * {
 	margin-left: 10%;	

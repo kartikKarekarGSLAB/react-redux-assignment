@@ -1,0 +1,28 @@
+{
+	"users" : [
+		{
+			"id" : 1001,
+			"username": "kartik",
+			"password":"kartik@12345",
+			"email":"kartik.karekar08@gmail.com"
+		},
+		{
+			"id" : 1002,
+			"username": "shivajiMutkule",
+			"password":"shivaji@12345",
+			"email":"shivaji.mutkule08@gmail.com"
+		},
+		{
+			"id" : 1003,
+			"username": "mandar",
+			"password":"mandar@12345",
+			"email":"mandar.dharurkar08@gmail.com"
+		},
+		{
+			"id" : 1004,
+			"username": "vishal",
+			"password":"vishal@12345",
+			"email":"vishal.jotshi08@gmail.com"
+		}						
+	]
+}

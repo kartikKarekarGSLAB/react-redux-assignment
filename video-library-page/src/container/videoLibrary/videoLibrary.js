@@ -1,23 +1,40 @@
 import React , { Component } from 'react';
+import { connect } from 'react-redux';
+
 import './videoLibrary.css' 
-import VideoList from './../../components/videoList/videoList';
+
+import Video from './../../components/video/video';
+
+import { getVideoPlaylist } from './../../actions/videoLibraryAction';
 
 
 class VideoLibrary extends Component {
+	componentDidMount() {
+		this.props.getVideoPlaylist();
+	}
+
+	playListVideoSelected = (event,currentVideo) => {
+		document.getElementById("player").setAttribute("src",currentVideo.httpUri);
+		document.getElementById("video-player-title").innerHTML = currentVideo.title;
+	}
 	render() {
+		const videoArray = this.props.videos.map( (currentVideo) => {
+							return (<Video 
+									  key = {currentVideo.contentVideoPk}
+								      onClick={(event) => this.playListVideoSelected(event,currentVideo)} 
+								      videoDetails={currentVideo} />
+									);
+							});		
 		return (
+
 			<div id='video-library'>
 				<div id='video-player'>
 					<p id='video-player-note'>
 						Your provider will be with you momentarily.
 					</p>
-					<iframe width="650" height="420" 
-						src="https://www.youtube.com/embed/YmGm-qwbJdc?list=PL55RiY5tL51rrC3sh8qLiYHqUV3twEYU_" 
-						frameBorder="0" 
-						allow="autoplay; encrypted-media" 
-						allowFullScreen />
+					<video id="player" controls="true" width="650" height="420" autoPlay= "true" src="https://pccontent01.stagrp.com/v/RELAXATION/2015HD_BreathOfLight.mp4">
+					</video>
 					<p id='video-player-title'>
-						current video title
 					</p>					
 				</div>
 				<div id='video-playlist'>
@@ -27,11 +44,20 @@ class VideoLibrary extends Component {
 					<p id='video-playlist-title'>
 						Up Next
 					</p>
-					<VideoList />
+					<ul id="video-lib-video-list">
+						{ videoArray }
+					</ul>
 				</div>				
 			</div>
 			);
 	}
 }
 
-export default VideoLibrary;
+const mapStateToProps = (state) => ({
+	videos : state.videoLibrary.videos
+});
+const mapDispatchToProps = (dispatch,props) => ({
+  getVideoPlaylist : () => { dispatch( getVideoPlaylist() ) }	
+});
+
+export default connect(mapStateToProps , mapDispatchToProps )(VideoLibrary);
