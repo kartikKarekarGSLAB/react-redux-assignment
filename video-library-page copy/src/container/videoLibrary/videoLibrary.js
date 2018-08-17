@@ -10,16 +10,15 @@ import { getVideoPlaylist,videoSelectedFromPlayList } from './../../actions/vide
 class VideoLibrary extends Component {
 	componentDidMount() {
 		this.props.getVideoPlaylist();
-		this.props.videoSelectedFromPlayList({},{});
+	}
+
+	playListVideoSelected = (event,currentVideo) => {
+		document.getElementById("player").setAttribute("src",currentVideo.httpUri);
+		document.getElementById("video-player-title").innerHTML = currentVideo.title;
 	}
 	render() {
-		var currentVideoTitle , currentVideoURL;
-		const videoArray = this.props.videos.map( (currentVideo , index ) => {
-							console.log('current index : ',index);
-							if(index == 0 ) {
-								currentVideoURL  = currentVideo.httpUri;
-								currentVideoTitle = currentVideo.title;		
-							}
+		const videoArray = this.props.videos.map( (currentVideo) => {
+							console.log('inside map loop : ',this.props);
 							return (<div
 							        key = {currentVideo.contentVideoPk} 
 								    onClick={(event) => this.props.videoSelectedFromPlayList(event,currentVideo) }>
@@ -29,10 +28,14 @@ class VideoLibrary extends Component {
 								    </div>  
 									);
 							});
-
-		if(typeof this.props.currentVideo.title != 'undefined') {
-			currentVideoURL = this.props.currentVideo.httpUri;
+		var currentVideoTitle = '';		
+		// console.log('============================================> ',(this.props.currentVideo !== undefined));
+		if(this.props.currentVideo !== undefined ) {
 			currentVideoTitle = this.props.currentVideo.title;
+		}
+		else	{
+			console.log(this.props.videos);
+			// currentVideoTitle = this.props.videos[0].title;		
 		}
 		return (
 
@@ -40,13 +43,6 @@ class VideoLibrary extends Component {
 				<div id='video-player'>
 					<p id='video-player-note'>
 						Your provider will be with you momentarily.
-					</p>
-					<video id="player" controls="true" width="650" height="420" autoPlay= "true" src={currentVideoURL}>
-					</video>
-					<p id='video-player-title'>
-					{
-						currentVideoTitle
-					}
 					</p>					
 				</div>
 				<div id='video-playlist'>
@@ -71,7 +67,7 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = (dispatch,props) => ({
   getVideoPlaylist : () => { dispatch( getVideoPlaylist() ) },
-  videoSelectedFromPlayList : (event,currentVideo) => { dispatch( videoSelectedFromPlayList(event,currentVideo) ) }	
+  videoSelectedFromPlayList : (event,currentState) => { dispatch( videoSelectedFromPlayList(event,currentState) ) }	
 });
 
 export default connect(mapStateToProps , mapDispatchToProps )(VideoLibrary);

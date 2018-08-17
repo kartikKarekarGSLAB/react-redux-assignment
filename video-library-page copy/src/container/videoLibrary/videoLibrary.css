@@ -10,11 +10,7 @@
 	margin-left: 10%;	
 }
 #video-playlist {
-	width: 35%;	
-}
-#video-lib-video-list {
-    max-height: 550px;
-    overflow-y: scroll;
+	width: 35%;
 }
 #video-playlist-note ,#video-player-note ,#video-player-title{
 	font-weight: bolder;

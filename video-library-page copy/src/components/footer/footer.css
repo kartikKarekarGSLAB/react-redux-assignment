@@ -1,0 +1,7 @@
+#video-lib-footer {
+	margin-top: 5%;
+	float: right;
+}
+#video-lib-footer > * {
+	display: inline;
+}
