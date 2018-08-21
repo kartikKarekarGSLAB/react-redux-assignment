@@ -1,13 +1,16 @@
-#video-lib-video {
-
-}
-#video-lib-video > * {
-	display: inline-block;
-}
 .video-details {
 	width: 40%;
 }
-.video-details > p {
+.video-title {
 	font-size: 15px;
-    margin-left: 5%;
+}
+.video-details > p {
+	margin: 0px;
+}
+.playlist-item {
+	margin-bottom: 3%;
+}
+.video-duration {
+	width: 50%;
+	display: inline-block;
 }

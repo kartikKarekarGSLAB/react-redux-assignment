@@ -2,21 +2,24 @@
 	width: 50%;
 	display: inline-block;
 }
+#wait-message {
+	margin-top: 3%;
+}
+#player ,#video-playlist {
+	margin-top: 5%;
+}
 #video-player {
+	margin-top: 1%;
 	width: 65%;
 	vertical-align:  text-top;
 }
 #video-player > * {
 	margin-left: 10%;	
 }
-#video-playlist {
-	width: 35%;	
+#video-player-title {
+	font-size: 25px;
 }
-#video-lib-video-list {
-    max-height: 550px;
-    overflow-y: scroll;
-}
-#video-playlist-note ,#video-player-note ,#video-player-title{
+#video-player-note {
 	font-weight: bolder;
     width: 80%;	
 }
@@ -26,4 +29,9 @@
 #video-playlist-title {
 	text-decoration: underline;
     font-weight: 900;	
+}
+#video-lib-video-list {
+	padding-left: 0px;
+    overflow:auto;
+    height: 700px;
 }

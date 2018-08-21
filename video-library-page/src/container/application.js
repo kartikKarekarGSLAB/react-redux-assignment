@@ -7,18 +7,12 @@ import store from './../store';
 
 class Application extends Component {
   
-  componentDidMount() {
-  	console.log('this is my demo for server-client');
-  	fetch('http://localhost:3001/payloadList').then((response) => response.json()).then((videos) => {
-  		console.log(videos);
-  	});
-  }	
   render() {
     return (
-	  <Provider store = { store }>	    
+	  <Provider store = { store }>
 	      <div>
 	          <Header />
-	            <VideoLibrary />
+              <VideoLibrary />
 	          <Footer />
 	      </div>
 	  </Provider>
