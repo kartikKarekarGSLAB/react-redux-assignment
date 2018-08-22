@@ -1,16 +1,22 @@
 .video-details {
 	width: 40%;
+	padding: 0px;
+    font-size: 14px;	
 }
 .video-title {
 	font-size: 15px;
+    font-weight: bold;	
 }
 .video-details > p {
 	margin: 0px;
 }
 .playlist-item {
-	margin-bottom: 3%;
+	cursor: pointer;
 }
 .video-duration {
-	width: 50%;
+	width: 110px;
 	display: inline-block;
+}
+.video-thumbnail{
+	padding-left: 0px !important;
 }

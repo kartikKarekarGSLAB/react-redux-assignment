@@ -9,14 +9,15 @@ function videoLibraryReducer(
 	switch (action.type) {
 		case 'GET_VIDEO_LIBRARY':
 			action.payload.map((currentVideo) => currentVideo.watched = false );
-			return {...previousState , videos : action.payload };
+			return {...previousState , videos : action.payload , currentVideo : action.payload[0]};
 		case 'VIDEO_SELECTED_FROM_PLAYLIST':
+			// selected video flag changed to true.
+			// to render. 
 			action.payload.watched = true;
 			return {...previousState , currentVideo : action.payload };
 		case 'FAIL_TO_GET_VIDEO_LIBRARY':
 			return {...previousState , videosAvaliable : false};
 		default:
-			console.log('inside default case - for videoLibraryReducer');			
 			return {...previousState};
 	}
 } 

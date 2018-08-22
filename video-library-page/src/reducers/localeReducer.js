@@ -1,25 +1,25 @@
-import en from './../locales/en/en'; //load locale messages
-import es from './../locales/es/es'; //load locale messages
+import enlocale from './../locales/en/en'; //load locale messages
+import eslocale from './../locales/es/es'; //load locale messages
 
 function localeReducer( 
 			previousState = { 
 								lang : 'en' ,
-								locale : en 
+								locale : enlocale 
 							}, 
 			action ) 
 {
-	var locale = en;
+	var locale = enlocale;
 	switch (action.type) {
 		case 'LOCALE_CHANGED' :
 			switch(action.payload){
 				case 'en' :
-					locale = en;
+					locale = enlocale;
 					break;
 				case 'es' :
-					locale = es;
+					locale = eslocale;
 					break;
 				default:
-					locale = en;
+					locale = enlocale;
 					break;
 			}
 			return {...previousState , lang : action.payload , locale : locale };

@@ -8,6 +8,10 @@
 #player ,#video-playlist {
 	margin-top: 5%;
 }
+#video-playlist {
+	margin-top: 5%;
+	height: calc(100% - 1013px);	
+}
 #video-player {
 	margin-top: 1%;
 	width: 65%;
@@ -32,6 +36,15 @@
 }
 #video-lib-video-list {
 	padding-left: 0px;
-    overflow:auto;
-    height: 700px;
+}
+.selectedVideo {
+	border : 2px solid lightblue;
+	border-radius: 10px;
+}
+.video-playlist-item {
+	margin-bottom: 10px;
+}
+.video-player-container {
+	position: fixed !important;
+    width: 55% !important;	
 }

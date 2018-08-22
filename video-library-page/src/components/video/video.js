@@ -6,7 +6,7 @@ function Video(props) {
 	return(
 		<div className='container playlist-item'>
 			<div className='row'>
-				<div className='col-lg-4'>
+				<div className='col-lg-4 video-thumbnail'>
 					<img className = 'img-thumbnail'
 						 width = '150px'
 						 height = '150px'

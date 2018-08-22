@@ -1,8 +1,13 @@
 export default {
-	"video_library" : {
-		"wait_message" : "Su proveedor estará con usted momentáneamente",
-		"video_playlist_note" : "Los siguientes videos han sido seleccionados especialmente para ti mientras esperas",
-		"video_playlist_title" : "Hasta la próxima",
-		"video_playlist_error" : "Videos no disponibles en la lista de reproducción."
-	}
+	// header text.
+	"header.header_title" : "Hospital de Francisco",
+	
+	// footer text.
+	"footer.footer_title" : "Powered ExtendedCore",
+
+	// video library text.
+	"video_library.wait_message" : "Su proveedor estará con usted momentáneamente", 
+	"video_library.video_playlist_note" : "Los siguientes videos han sido seleccionados especialmente para ti mientras esperas",
+	"video_library.video_playlist_title" : "Hasta la próxima",
+	"video_library.video_playlist_error" : "Videos no disponibles en la lista de reproducción."	
 }

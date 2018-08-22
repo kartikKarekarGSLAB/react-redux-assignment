@@ -1,8 +1,10 @@
 import axios from 'axios';
+import config from './../config/developement/config';
+
 
 export var getVideoPlaylist = () => dispatch => {
-	axios.get('http://localhost:3001/payloadList').then((response) =>  {
-		console.log('inside action creator SUCCESS for data : ',response);
+	var apiURL = config.contenthost + config.api.videoList;
+	axios.get( apiURL ).then((response) =>  {
 		dispatch({ type:'GET_VIDEO_LIBRARY' , payload:response.data })
 	}).catch((error) => {
 		if (error.response.status === 404) {
@@ -10,6 +12,7 @@ export var getVideoPlaylist = () => dispatch => {
 		}		
 	});
 }
+
 
 export var videoSelectedFromPlayList = (event,currentVideo) => dispatch => {
 	dispatch({type:'VIDEO_SELECTED_FROM_PLAYLIST' ,payload:currentVideo});
