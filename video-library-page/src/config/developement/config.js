@@ -1,7 +1,8 @@
 export default {
-	"lang" : "es" ,
-	"contenthost" : "http://localhost:3001" ,
-	"api" : {
-		"videoList" : "/payloadlist"
-	}
+    "lang": "en",
+    "contenthost": "http://localhost:3001",
+    "api": {
+        "videoList": "/videoplaylist",
+        "endpointsList": "/endpointslist"
+    }
 }

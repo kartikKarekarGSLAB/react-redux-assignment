@@ -4,17 +4,30 @@ import { connect } from 'react-redux';
 import './videoLibrary.css' 
 
 import Video from './../../components/video/video';
-import { getVideoPlaylist,videoSelectedFromPlayList } from './../../actions/videoLibraryAction';
+import { videoSelectedFromPlayList,requestVideoPlaylist } from './../../actions/videoLibraryAction';
 
 // for localization of lang.
 import {FormattedMessage} from 'react-intl'; // to print Message from locale.
 
+import loading from './../../images/loading_icon.gif';
+
 class VideoLibrary extends Component {
 	componentDidMount() {
-		this.props.getVideoPlaylist();
-		this.props.videoSelectedFromPlayList({},{});
+		this.props.requestVideoPlaylist();
 	}
 	render() {
+		
+		if(this.props.loading) {
+		return (
+				<div className = 'container-fluid'>
+					<div className = 'row'>
+						<div className = 'col-lg-12 col-sm-12 col-md-12 col-xs-12 text-center'>
+							<img id="loading-icon" src={ loading } alt='loading-logo' />
+						</div>
+					</div>
+				</div>
+			);
+		}
 		const videoArray = this.props.videos.map( (currentVideo , index ) => {
 							var selected = "video-playlist-item ";
 							if(currentVideo.contentVideoPk === this.props.currentVideo.contentVideoPk) {
@@ -44,9 +57,9 @@ class VideoLibrary extends Component {
 										/>
 									</h3>
 									<video id="player" controls="true" width="70%" height="60%" 
-									       autoPlay= "true" src={ this.props.currentVideo.httpUri }>
+									       autoPlay= "true" src={ this.props.currentVideo ? this.props.currentVideo.httpUri : '' }>
 									</video>
-									<p id='video-player-title'>{ this.props.currentVideo.title }</p>
+									<p id='video-player-title'>{ this.props.currentVideo ? this.props.currentVideo.title : '' }</p>
 								</div>
 							</div>
 													
@@ -64,7 +77,7 @@ class VideoLibrary extends Component {
 									defaultMessage=""
 								/>
 							</p>
-							{ this.props.videosAvaliable ? 
+							{ this.props.videos.length > 0 ? 
 							  <ul id="video-lib-video-list"> {videoArray} </ul> :
 							  <p>
 								<FormattedMessage 
@@ -81,12 +94,13 @@ class VideoLibrary extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	videos : state.videoLibrary.videos ,
-	currentVideo : state.videoLibrary.currentVideo,
-	videosAvaliable : state.videoLibrary.videosAvaliable
+	videos : state.videoLibrary.videosList.videos,
+	loading : state.videoLibrary.videosList.loading,
+	errorMessage : state.videoLibrary.videosList.error,
+	currentVideo : state.videoLibrary.currentVideo
 });
 const mapDispatchToProps = (dispatch,props) => ({
-  getVideoPlaylist : () => { dispatch( getVideoPlaylist() ) },
+  requestVideoPlaylist : () => { dispatch( requestVideoPlaylist() ) },
   videoSelectedFromPlayList : (event,currentVideo) => { dispatch( videoSelectedFromPlayList(event,currentVideo) ) }
 });
 

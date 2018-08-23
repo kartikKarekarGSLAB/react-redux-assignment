@@ -9,5 +9,6 @@ export default {
 	"video_library.wait_message" : "Su proveedor estará con usted momentáneamente", 
 	"video_library.video_playlist_note" : "Los siguientes videos han sido seleccionados especialmente para ti mientras esperas",
 	"video_library.video_playlist_title" : "Hasta la próxima",
-	"video_library.video_playlist_error" : "Videos no disponibles en la lista de reproducción."	
+	"video_library.video_playlist_error" : "Videos no disponibles en la lista de reproducción.",
+	"video_library.video_timer_label" : "min"	
 }

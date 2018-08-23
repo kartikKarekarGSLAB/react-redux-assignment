@@ -3,6 +3,6 @@
 	margin-top: 10px;
 	margin-right: 50px;	
 }
-#video-lib-footer > * {
+#video-lib-footer-icon , #video-lib-footer-text {
 	display: inline;
 }

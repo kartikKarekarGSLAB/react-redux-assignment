@@ -1,5 +1,7 @@
 import React  from 'react';
 import './video.css';
+import videoWatchedIcon from './../../images/video_watch_icon.png';
+import {FormattedMessage} from 'react-intl'; // to print Message from locale.
 
 function Video(props) {
 
@@ -16,10 +18,16 @@ function Video(props) {
 				</div>
 				<div className='col-lg-8 video-details'>
 					<p className='video-title'>{props.videoDetails.title}</p>
-					<p className='video-duration'>{props.videoDetails.duration} min</p>
+					<p className='video-duration'>
+						{props.videoDetails.duration}&nbsp;&nbsp;
+						<FormattedMessage 
+							id="video_library.video_timer_label" 
+							defaultMessage = ""
+						/>
+						</p>
 					<span>
 					{
-						props.videoDetails.watched ? <img src='https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/eye-24-16.png'
+						props.videoDetails.watched ? <img src={videoWatchedIcon}
 							       alt='watch-logo' /> : null
 					}
 				    </span>					

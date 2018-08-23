@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Header from './../../components/header/header';
 import Footer from './../../components/footer/footer';
 import VideoLibrary from './../videoLibrary/videoLibrary';
+import Endpoints from './../endpoints/endpoints';
 
 // import Provider and store
 import { Provider } from 'react-redux';
@@ -15,11 +16,10 @@ import {IntlProvider} from 'react-intl';
 // import config for developement.
 import config from './../../config/developement/config';
 
-// import actionReducer from actions
-import { localeChanged } from './../../actions/localeAction'; 
-
 import enlocale from './../../locales/en/en'; //load locale messages
 import eslocale from './../../locales/es/es'; //load locale messages
+
+import {BrowserRouter as Router , Route } from 'react-router-dom';
 
 class Application extends Component {
   locale = {}
@@ -43,11 +43,13 @@ class Application extends Component {
     return (
 	  <Provider store = { store }>
       <IntlProvider locale={ config.lang } messages={ this.locale }>
-  	      <div>
+  	    <Router>
+          <div>
   	          <Header />
-                <VideoLibrary />
+                <Endpoints />
   	          <Footer />
   	      </div>
+        </Router>
       </IntlProvider>
 	  </Provider>
     );

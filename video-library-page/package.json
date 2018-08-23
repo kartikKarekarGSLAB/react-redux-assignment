@@ -13,12 +13,14 @@
     "react-dom": "^16.4.2",
     "react-intl": "^2.4.0",
     "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6"
   },
   "scripts": {
-    "STUB": "json-server --watch ./server/dataset/video_library.json --static ./server/public/",
+    "STUB": "json-server -w ./server/dataset/video_library.json ./server/dataset/endpoints.json --static ./server/public/",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

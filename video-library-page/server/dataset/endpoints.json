@@ -1,0 +1,66 @@
+{
+   "endpointslist" : 
+         {  
+	         "status":{  
+	            "statusCode":200,
+	            "errorKey":"",
+	            "errorMessage":"SUCCESS"
+	         },
+	         "payloadList":[
+				{
+					"endpointId": "DX801",
+					"endpointName": "TelehealthRoom -1",
+					"endpointType": "DX_80",
+					"statusBusy": false,
+					"username": "",
+					"videoURL": "start?callControlKey=chp0123&videoCallId=2611&userId=shivaji20&displayMsg=YourMessageHere&startTime=0&duration=0&callType=P2P&role=2&endpointId=DX801&endpointKey=DX801&endpointType=PRECONFIG",
+					"message": "null"
+				},
+				{
+					"endpointId": "DX802",
+					"endpointName": "TelehealthRoom -2",
+					"endpointType": "DX_80",
+					"statusBusy": false,
+					"username": "",
+					"videoURL": "start?callControlKey=chp0123&videoCallId=2611&userId=shivaji20&displayMsg=YourMessageHere&startTime=0&duration=0&callType=P2P&role=2&endpointId=DX801&endpointKey=DX801&endpointType=PRECONFIG",
+					"message": "null"
+				},
+				{
+					"endpointId": "DX803",
+					"endpointName": "TelehealthRoom -3",
+					"endpointType": "DX_80",
+					"statusBusy": false,
+					"username": "",
+					"videoURL": "start?callControlKey=chp0123&videoCallId=2611&userId=shivaji20&displayMsg=YourMessageHere&startTime=0&duration=0&callType=P2P&role=2&endpointId=DX801&endpointKey=DX801&endpointType=PRECONFIG",
+					"message": "null"
+				},
+				{
+					"endpointId": "DX804",
+					"endpointName": "TelehealthRoom -4",
+					"endpointType": "DX_80",
+					"statusBusy": false,
+					"username": "",
+					"videoURL": "start?callControlKey=chp0123&videoCallId=2611&userId=shivaji20&displayMsg=YourMessageHere&startTime=0&duration=0&callType=P2P&role=2&endpointId=DX801&endpointKey=DX801&endpointType=PRECONFIG",
+					"message": "null"
+				},
+				{
+					"endpointId": "DX805",
+					"endpointName": "TelehealthRoom -5",
+					"endpointType": "DX_80",
+					"statusBusy": false,
+					"username": "",
+					"videoURL": "start?callControlKey=chp0123&videoCallId=2611&userId=shivaji20&displayMsg=YourMessageHere&startTime=0&duration=0&callType=P2P&role=2&endpointId=DX801&endpointKey=DX801&endpointType=PRECONFIG",
+					"message": "null"
+				},
+				{
+					"endpointId": "DX806",
+					"endpointName": "TelehealthRoom -6",
+					"endpointType": "DX_80",
+					"statusBusy": false,
+					"username": "",
+					"videoURL": "start?callControlKey=chp0123&videoCallId=2611&userId=shivaji20&displayMsg=YourMessageHere&startTime=0&duration=0&callType=P2P&role=2&endpointId=DX801&endpointKey=DX801&endpointType=PRECONFIG",
+					"message": "null"
+				}																					         	
+	         ]
+		 }
+}		 

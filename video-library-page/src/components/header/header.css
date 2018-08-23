@@ -2,6 +2,6 @@
 	width: 100%;
 	border-bottom: 1px solid black;
 }
-#video-lib-header > * {
+#video-lib-header-text , #video-lib-header-icon {
 	display: inline;
 }

@@ -1,0 +1,9 @@
+
+.endpoint-buttton{
+    display: block;
+    width: 300px;
+    height: 40px;
+    background-color: skyblue;
+    margin: auto;
+    margin-top: 7px;	
+}
