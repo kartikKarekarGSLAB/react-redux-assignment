@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 // import components
 import Header from './../../components/header/header';
 import Footer from './../../components/footer/footer';
-import VideoLibrary from './../videoLibrary/videoLibrary';
-import Endpoints from './../endpoints/endpoints';
+import Routes from './../../components/routes/routes';
 
 // import Provider and store
 import { Provider } from 'react-redux';
@@ -39,17 +38,18 @@ class Application extends Component {
   }
   componentDidMount() {
   }
+  
   render() {
     return (
 	  <Provider store = { store }>
       <IntlProvider locale={ config.lang } messages={ this.locale }>
-  	    <Router>
-          <div>
-  	          <Header />
-                <Endpoints />
-  	          <Footer />
-  	      </div>
-        </Router>
+        <div>
+        <Header />
+            <Router>
+              <Routes />
+            </Router>
+        <Footer />
+        </div>  	    
       </IntlProvider>
 	  </Provider>
     );

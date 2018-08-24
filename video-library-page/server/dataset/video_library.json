@@ -1376,7 +1376,7 @@
             "payloadList":[
             {
                "endpointId": "DX801",
-               "endpointName": "TelehealthRoom",
+               "endpointName": "TelehealthRoom-1",
                "endpointType": "DX_80",
                "statusBusy": false,
                "username": "",
@@ -1384,8 +1384,8 @@
                "message": "null"
             },
             {
-               "endpointId": "DX801",
-               "endpointName": "TelehealthRoom",
+               "endpointId": "DX802",
+               "endpointName": "TelehealthRoom-2",
                "endpointType": "DX_80",
                "statusBusy": false,
                "username": "",
@@ -1393,8 +1393,8 @@
                "message": "null"
             },
             {
-               "endpointId": "DX801",
-               "endpointName": "TelehealthRoom",
+               "endpointId": "DX803",
+               "endpointName": "TelehealthRoom-3",
                "endpointType": "DX_80",
                "statusBusy": false,
                "username": "",
@@ -1402,8 +1402,8 @@
                "message": "null"
             },
             {
-               "endpointId": "DX801",
-               "endpointName": "TelehealthRoom",
+               "endpointId": "DX804",
+               "endpointName": "TelehealthRoom-4",
                "endpointType": "DX_80",
                "statusBusy": false,
                "username": "",
@@ -1411,8 +1411,8 @@
                "message": "null"
             },
             {
-               "endpointId": "DX801",
-               "endpointName": "TelehealthRoom",
+               "endpointId": "DX805",
+               "endpointName": "TelehealthRoom-5",
                "endpointType": "DX_80",
                "statusBusy": false,
                "username": "",
@@ -1420,8 +1420,8 @@
                "message": "null"
             },
             {
-               "endpointId": "DX801",
-               "endpointName": "TelehealthRoom",
+               "endpointId": "DX806",
+               "endpointName": "TelehealthRoom-6",
                "endpointType": "DX_80",
                "statusBusy": false,
                "username": "",

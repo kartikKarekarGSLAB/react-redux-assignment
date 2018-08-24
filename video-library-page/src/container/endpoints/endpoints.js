@@ -1,6 +1,8 @@
 import React , { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { NavLink } from 'react-router-dom';
+
 import { requestEndpointsList } from  './../../actions/endpointsAction';
 import './endpoints.css' 
 
@@ -11,7 +13,7 @@ class Endpoints extends Component {
 		this.props.requestEndpointsList();
 	}
 	render() {
-		
+			
 			if(this.props.loading) {
 				return (
 						<div className = 'container-fluid'>
@@ -23,11 +25,28 @@ class Endpoints extends Component {
 						</div>
 					);
 			}
+
 			var endpoints = this.props.endpoints.map( (currentEndpoint) => {
-				return (<button className='endpoint-buttton' key={currentEndpoint.endpointId} >{currentEndpoint.endpointName}</button>);
+				var navigationURL = 
+					   '/videoLibrary?endpointId='+currentEndpoint.endpointId+
+					   '&endpointName='+currentEndpoint.endpointName+
+					   '&endpointType='+currentEndpoint.endpointType+
+					   '&statusBusy='+currentEndpoint.statusBusy+
+					   '&username='+currentEndpoint.username+
+					   '&videoURL='+currentEndpoint.videoURL+
+					   '&message='+currentEndpoint.message;
+				return (<NavLink to={navigationURL}
+								 key={currentEndpoint.endpointId}>
+					 	    <button className='endpoint-buttton' 
+					 	            onClick={(event) =>
+					 	            	console.log(currentEndpoint)
+					 	            	} >
+					 	    {currentEndpoint.endpointName}
+					 	    </button>
+				 	    </NavLink>);
 			});
 			return (
-					<div className = 'container-fluid'>
+					<div className = 'container-fluid endpoints-container'>
 						<div className = 'row'>
 							<div className = 'col-lg-12 col-sm-12 col-md-12 col-xs-12 text-center'>
 								{ endpoints }

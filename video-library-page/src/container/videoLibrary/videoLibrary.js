@@ -16,7 +16,7 @@ class VideoLibrary extends Component {
 		this.props.requestVideoPlaylist();
 	}
 	render() {
-		
+		console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> URL : ',this.props.match.params);
 		if(this.props.loading) {
 		return (
 				<div className = 'container-fluid'>

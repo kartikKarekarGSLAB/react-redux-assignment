@@ -6,7 +6,7 @@ import videoFooterIcon from './../../images/video_library_footer_icon.png';
 
 function Footer(props) {
 	return(
-		<div id="video-lib-footer" className="text-right">
+		<footer id="video-lib-footer" className="text-right">
 			<img id="video-lib-footer-icon" src={ videoFooterIcon } alt='footer-logo' />
 			<p id="video-lib-footer-text">
 				<FormattedMessage 
@@ -14,7 +14,7 @@ function Footer(props) {
 					defaultMessage=""
 				/>
 			</p> 
-		</div>
+		</footer>
 		);
 }
 
