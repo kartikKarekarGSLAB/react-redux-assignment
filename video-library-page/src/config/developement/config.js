@@ -1,5 +1,5 @@
 export default {
-    "lang": "en",
+    "lang": "es",
     "contenthost": "http://localhost:3001",
     "api": {
         "videoList": "/videoplaylist",

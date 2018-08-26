@@ -1,6 +1,10 @@
 #video-lib-header {
 	width: 100%;
 	border-bottom: 1px solid black;
+	position: sticky !important;
+	top: 0 !important;
+	z-index: 99999;
+	background-color: #ffffff;
 }
 #video-lib-header-text , #video-lib-header-icon {
 	display: inline;

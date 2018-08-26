@@ -16,10 +16,11 @@ class VideoLibrary extends Component {
 		this.props.requestVideoPlaylist();
 	}
 	render() {
-		console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> URL : ',this.props.match.params);
+		console.log('inside videoLibrary properties: ',this.props);
+		console.log('--------------------------------------------');
 		if(this.props.loading) {
 		return (
-				<div className = 'container-fluid'>
+				<div className = 'container-fluid video-library-page'>
 					<div className = 'row'>
 						<div className = 'col-lg-12 col-sm-12 col-md-12 col-xs-12 text-center'>
 							<img id="loading-icon" src={ loading } alt='loading-logo' />
@@ -45,18 +46,18 @@ class VideoLibrary extends Component {
 
 
 		return (
-				<div className = 'container-fluid'>
+				<div className = 'container'>
 					<div className = 'row'>
-						<div className = 'col-lg-8 col-sm-8 col-md-8 col-xs-8 text-center'>
-							<div className='row'>
-								<div className='col-xs-12 col-md-12 col-lg-12 col-sm-12 video-player-container'>
+						<div className = 'col-lg-8 col-sm-12 col-md-8 col-xs-12 text-center'>
+							<div className='row video-player-container'>
+								<div className='col-xs-12 col-md-12 col-lg-12 col-sm-12'>
 									<h3 id = "wait-message">
 										<FormattedMessage 
 											id="video_library.wait_message" 
 											defaultMessage = ""
 										/>
 									</h3>
-									<video id="player" controls="true" width="70%" height="60%" 
+									<video id="player" controls="true" width="450px" height="350px" 
 									       autoPlay= "true" src={ this.props.currentVideo ? this.props.currentVideo.httpUri : '' }>
 									</video>
 									<p id='video-player-title'>{ this.props.currentVideo ? this.props.currentVideo.title : '' }</p>
@@ -64,7 +65,7 @@ class VideoLibrary extends Component {
 							</div>
 													
 						</div>
-						<div className = 'col-lg-4 col-sm-4 col-md-4 col-xs-4' id='video-playlist'>
+						<div className = 'col-lg-4 col-sm-12 col-md-4 col-xs-12' id='video-playlist'>
 							<p id='video-playlist-note'>
 								<FormattedMessage 
 									id="video_library.video_playlist_note" 

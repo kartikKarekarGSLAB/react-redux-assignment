@@ -16,7 +16,7 @@ class Endpoints extends Component {
 			
 			if(this.props.loading) {
 				return (
-						<div className = 'container-fluid'>
+						<div className = 'container-fluid endpoints-container'>
 							<div className = 'row'>
 								<div className = 'col-lg-12 col-sm-12 col-md-12 col-xs-12 text-center'>
 									<img id="loading-icon" src={ loading } alt='loading-logo' />
@@ -36,7 +36,8 @@ class Endpoints extends Component {
 					   '&videoURL='+currentEndpoint.videoURL+
 					   '&message='+currentEndpoint.message;
 				return (<NavLink to={navigationURL}
-								 key={currentEndpoint.endpointId}>
+								 key={currentEndpoint.endpointId}
+								 className="next-page-link">
 					 	    <button className='endpoint-buttton' 
 					 	            onClick={(event) =>
 					 	            	console.log(currentEndpoint)
