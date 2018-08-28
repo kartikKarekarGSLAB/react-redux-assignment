@@ -1,0 +1,8 @@
+#page-not-found-container {
+	height: 100vh;
+}
+
+#page-not-found-message {
+	margin: 20% auto;
+	z-index: 999999;	
+}

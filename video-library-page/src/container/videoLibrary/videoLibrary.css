@@ -1,5 +1,6 @@
 #wait-message {
 	margin-top: 50px;
+	height: 10%;
 }
 
 #player, #video-playlist {
@@ -12,6 +13,7 @@
 
 #video-player-title {
 	font-size: 25px;
+	height: 10%;
 }
 
 #video-player-note {
@@ -59,4 +61,7 @@
 	left: 50%;
 	top: 50%;
 	z-index: 999999;
+}
+.padding-null {
+	padding: 0px;
 }

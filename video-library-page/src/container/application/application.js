@@ -45,7 +45,7 @@ class Application extends Component {
       <IntlProvider locale={ config.lang } messages={ this.locale }>
         <div>
         <Header />
-            <Router>
+            <Router basename="/build">
               <Routes />
             </Router>
         <Footer />

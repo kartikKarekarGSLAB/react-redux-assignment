@@ -16,8 +16,7 @@ class VideoLibrary extends Component {
 		this.props.requestVideoPlaylist();
 	}
 	render() {
-		console.log('inside videoLibrary properties: ',this.props);
-		console.log('--------------------------------------------');
+		console.log('inside videoLibrary properties :>>>>>> ',this.props);
 		if(this.props.loading) {
 		return (
 				<div className = 'container-fluid video-library-page'>
@@ -46,22 +45,24 @@ class VideoLibrary extends Component {
 
 
 		return (
-				<div className = 'container'>
+				<div className = 'container-fluid'>
 					<div className = 'row'>
 						<div className = 'col-lg-8 col-sm-12 col-md-8 col-xs-12 text-center'>
 							<div className='row video-player-container'>
-								<div className='col-xs-12 col-md-12 col-lg-12 col-sm-12'>
+								<div className='col-xs-1 col-md-1 col-lg-1 col-sm-1 padding-null'></div>
+								<div className='col-xs-10 col-md-10 col-lg-10 col-sm-10'>
 									<h3 id = "wait-message">
 										<FormattedMessage 
 											id="video_library.wait_message" 
 											defaultMessage = ""
 										/>
 									</h3>
-									<video id="player" controls="true" width="450px" height="350px" 
+									<video id="player" controls="true" width="100%" height="50%" 
 									       autoPlay= "true" src={ this.props.currentVideo ? this.props.currentVideo.httpUri : '' }>
 									</video>
 									<p id='video-player-title'>{ this.props.currentVideo ? this.props.currentVideo.title : '' }</p>
 								</div>
+								<div className='col-xs-1 col-md-1 col-lg-1 col-sm-1 padding-null'></div>
 							</div>
 													
 						</div>
