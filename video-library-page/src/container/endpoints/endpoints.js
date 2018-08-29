@@ -28,7 +28,7 @@ class Endpoints extends Component {
 
 			var endpoints = this.props.endpoints.map( (currentEndpoint) => {
 				var navigationURL = 
-					   '/videoLibrary?endpointId='+currentEndpoint.endpointId+
+					   '/videolibrary?endpointId='+currentEndpoint.endpointId+
 					   '&endpointName='+currentEndpoint.endpointName+
 					   '&endpointType='+currentEndpoint.endpointType+
 					   '&statusBusy='+currentEndpoint.statusBusy+

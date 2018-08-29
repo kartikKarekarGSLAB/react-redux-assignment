@@ -11,7 +11,7 @@ const Routes = () => {
 		<div className= "routes-container">
 			<Switch>
 				<Route path="/" exact component = { Endpoints } />
-				<Route path="/videoLibrary" exact component = { VideoLibrary } />
+				<Route path="/videolibrary" exact component = { VideoLibrary } />
 				<Route component={ PageNotFound } />
 			</Switch>
 		</div>
